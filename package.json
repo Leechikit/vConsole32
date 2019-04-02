@@ -1,0 +1,24 @@
+{
+  "name": "mobile-console",
+  "version": "0.0.1",
+  "description": "A front-end debugging tool for mobile web page",
+  "main": "lib/mobile-console.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leechikit/mobile-console.git"
+  },
+  "keywords": [
+    "debug",
+    "console",
+    "mobile"
+  ],
+  "author": "leechikit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leechikit/mobile-console/issues"
+  },
+  "homepage": "https://github.com/Leechikit/mobile-console#readme"
+}
