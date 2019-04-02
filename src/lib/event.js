@@ -4,34 +4,40 @@
 * @author: leechikit
 * @update:
 */
-import vConsole from 'vconsole'
+export default {
+  init (vConsole) {
+    const THRESHOLD = 50
+    const FINGER = 3
+    let startTouchesX = []
 
-let times = 1
-let lastTapTime = null
-let isShow = false
-vConsole.hide()
+    vConsole.hideSwitch()
 
-window.addEventListener("touchend", function (e) {
-  var nowTime = new Date()
-  var touches = e.touches.length
+    window.addEventListener('touchstart', e => {
+      const touches = e.touches
+      if (touches.length === FINGER) {
+        startTouchesX = []
+        Array.prototype.slice.call(touches).forEach(touch => {
+          startTouchesX.push(touch.pageX)
+        })
+      }
+    })
 
-  if (times === 1) {
-    times++
-    lastTapTime = nowTime
-
-    setTimeout(function () {
-      times = 1
-    }, 1000)
-    return
+    window.addEventListener('touchend', e => {
+      const touches = e.changedTouches
+      if (touches.length === FINGER && startTouchesX.length === FINGER) {
+        let isShow = true
+        let index = 0
+        while (index < touches.length) {
+          if (startTouchesX[index] - touches[index].pageX > THRESHOLD) {
+            isShow = false
+            break
+          }
+          index++
+        }
+        if (isShow === true) {
+          vConsole.show()
+        }
+      }
+    })
   }
-
-  if (touches === 2 && times === 2 && (nowTime - lastTapTime < 1000)) {
-    if (isShow === false) {
-      vConsole.show()
-    } else {
-      vConsole.hide()
-    }
-    isShow = !isShow
-    times = 1
-  }
-})
+}
