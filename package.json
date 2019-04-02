@@ -1,14 +1,15 @@
 {
-  "name": "mobile-console",
+  "name": "vconsole32",
   "version": "0.0.1",
   "description": "A front-end debugging tool for mobile web page",
-  "main": "lib/mobile-console.js",
+  "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack-cli --config webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leechikit/mobile-console.git"
+    "url": "git+https://github.com/Leechikit/vConsole32.git"
   },
   "keywords": [
     "debug",
@@ -18,10 +19,14 @@
   "author": "leechikit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Leechikit/mobile-console/issues"
+    "url": "https://github.com/Leechikit/vConsole32/issues"
   },
-  "homepage": "https://github.com/Leechikit/mobile-console#readme",
+  "homepage": "https://github.com/Leechikit/vConsole32#readme",
   "dependencies": {
     "vconsole": "^3.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

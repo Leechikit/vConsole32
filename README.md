@@ -1,4 +1,4 @@
-# 32console
+# vConsole32
 
 [![npm][npm]][npm-url]
 [![builds][builds]][builds-url]
