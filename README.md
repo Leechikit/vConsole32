@@ -26,11 +26,11 @@ $ npm install --save vconsole32
 var vconsole32 = new VConsole32()
 ```
 
-[npm]: https://img.shields.io/npm/v/32console.svg
-[npm-url]: https://npmjs.com/package/32console
+[npm]: https://img.shields.io/npm/v/vconsole32.svg
+[npm-url]: https://npmjs.com/package/vconsole32
 
-[builds]: https://api.travis-ci.org/Leechikit/32console.svg?branch=master
-[builds-url]: https://travis-ci.org/Leechikit/32console
+[builds]: https://api.travis-ci.org/Leechikit/vconsole32.svg?branch=master
+[builds-url]: https://travis-ci.org/Leechikit/vconsole32
 
-[licenses]: https://img.shields.io/npm/l/32console.svg
-[licenses-url]: https://www.npmjs.com/package/32console
+[licenses]: https://img.shields.io/npm/l/vconsole32.svg
+[licenses-url]: https://www.npmjs.com/package/vconsole32
