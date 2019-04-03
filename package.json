@@ -1,6 +1,6 @@
 {
   "name": "vconsole32",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A front-end debugging tool for mobile web page",
   "main": "dist/vconsole32.min.js",
   "scripts": {
@@ -26,6 +26,9 @@
     "vconsole": "^3.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   }
