@@ -27,8 +27,10 @@ export default {
     })
 
     window.addEventListener('touchend', e => {
-      if (counter === 3) {
-        vConsole.show()
+      if (counter === 2) {
+        setTimeout(() => {
+          vConsole.show()
+        }, 100)
         counter = 0
         clearTimeout(timer)
         timer = null

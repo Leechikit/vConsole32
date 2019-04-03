@@ -1,6 +1,6 @@
 {
   "name": "vconsole32",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A front-end debugging tool for mobile web page",
   "main": "dist/vconsole32.min.js",
   "scripts": {
