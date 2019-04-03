@@ -4,39 +4,34 @@
 * @author: leechikit
 * @update:
 */
+
 export default {
   init (vConsole) {
-    const THRESHOLD = 50
     const FINGER = 3
-    let startTouchesX = []
+    const DURATION = 500
+    let counter = 0
+    let timer = null
 
     vConsole.hideSwitch()
 
     window.addEventListener('touchstart', e => {
       const touches = e.touches
       if (touches.length === FINGER) {
-        startTouchesX = []
-        Array.prototype.slice.call(touches).forEach(touch => {
-          startTouchesX.push(touch.pageX)
-        })
+        counter++
+        timer = setTimeout(() => {
+          counter = 0
+          clearTimeout(timer)
+          timer = null
+        }, DURATION)
       }
     })
 
     window.addEventListener('touchend', e => {
-      const touches = e.changedTouches
-      if (touches.length === FINGER && startTouchesX.length === FINGER) {
-        let isShow = true
-        let index = 0
-        while (index < touches.length) {
-          if (startTouchesX[index] - touches[index].pageX > THRESHOLD) {
-            isShow = false
-            break
-          }
-          index++
-        }
-        if (isShow === true) {
-          vConsole.show()
-        }
+      if (counter === 3) {
+        vConsole.show()
+        counter = 0
+        clearTimeout(timer)
+        timer = null
       }
     })
   }
