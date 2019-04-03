@@ -9,8 +9,8 @@ module.exports = {
     path: Path.resolve(__dirname, './dist'),
     filename: '[name].min.js',
     library: 'VConsole32',
-    libraryTarget: 'umd',
     libraryExport: "default",
+    libraryTarget: 'umd',
     umdNamedDefine: true
   }
 }
