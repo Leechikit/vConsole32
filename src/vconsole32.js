@@ -1,3 +1,10 @@
+/**
+* @name: vconsole32
+* @description: 入口文件
+* @author: leechikit
+* @update: 2019-04-03
+*/
+
 import VConsole from 'vconsole'
 import event from './lib/event.js'
 

@@ -2,7 +2,7 @@
 * @name: event
 * @description: 三指连点两次打开调试台事件
 * @author: leechikit
-* @update:
+* @update: 2019-04-03
 */
 
 export default {
